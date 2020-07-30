@@ -190,13 +190,13 @@ export default class AsyncImageAnimated extends Component<Props, State> {
       case "fade":
         return Animated.parallel([
           Animated.timing(placeholderOpacity, {
-            useNativeDriver: false,
+            useNativeDriver: true,
             delay,
             duration: 200,
             toValue: 0,
           }),
           Animated.timing(imageOpacity, {
-            useNativeDriver: false,
+            useNativeDriver: true,
             delay,
             duration: 300,
             toValue: 1,
@@ -207,20 +207,20 @@ export default class AsyncImageAnimated extends Component<Props, State> {
         return Animated.parallel([
           Animated.parallel([
             Animated.timing(placeholderOpacity, {
-              useNativeDriver: false,
+              useNativeDriver: true,
               delay,
               duration: 200,
               toValue: 0,
             }),
             Animated.timing(placeholderScale, {
-              useNativeDriver: false,
+              useNativeDriver: true,
               delay,
               duration: 200,
               toValue: 0,
             }),
           ]),
           Animated.timing(imageOpacity, {
-            useNativeDriver: false,
+            useNativeDriver: true,
             delay,
             duration: 300,
             toValue: 1,
@@ -232,13 +232,13 @@ export default class AsyncImageAnimated extends Component<Props, State> {
         return Animated.sequence([
           Animated.parallel([
             Animated.timing(placeholderScale, {
-              useNativeDriver: false,
+              useNativeDriver: true,
               delay,
               duration: 100,
               toValue: 0.7,
             }),
             Animated.timing(placeholderOpacity, {
-              useNativeDriver: false,
+              useNativeDriver: true,
               duration: 100,
               toValue: 0.66,
             }),
@@ -246,18 +246,18 @@ export default class AsyncImageAnimated extends Component<Props, State> {
           Animated.parallel([
             Animated.parallel([
               Animated.timing(placeholderOpacity, {
-                useNativeDriver: false,
+                useNativeDriver: true,
                 duration: 200,
                 toValue: 0,
               }),
               Animated.timing(placeholderScale, {
-                useNativeDriver: false,
+                useNativeDriver: true,
                 duration: 200,
                 toValue: 1.2,
               }),
             ]),
             Animated.timing(imageOpacity, {
-              useNativeDriver: false,
+              useNativeDriver: true,
               delay: 200,
               duration: 300,
               toValue: 1,
